@@ -115,40 +115,40 @@ RUN wget -O models/clip/t5xxl_fp8_e4m3fn.safetensors \
 # Additional desired downloads
 # -----------------------------------------
 # UNET (FLUX 1-dev-FP8)
-RUN wget -O models/unet/flux1-dev-fp8-e4m3fn.safetensors \
-    "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux1-dev-fp8-e4m3fn.safetensors"
+# RUN wget -O models/unet/flux1-dev-fp8-e4m3fn.safetensors \
+#     "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux1-dev-fp8-e4m3fn.safetensors"
 
-# CLIP
-RUN wget -O models/clip/clip_l.safetensors \
-    "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors" \
- && wget -O models/clip/t5xxl_fp8_e4m3fn.safetensors \
-    "https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
+# # CLIP
+# RUN wget -O models/clip/clip_l.safetensors \
+#     "https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors" \
+#  && wget -O models/clip/t5xxl_fp8_e4m3fn.safetensors \
+#     "https://huggingface.co/mcmonkey/google_t5-v1_1-xxl_encoderonly/resolve/main/t5xxl_fp8_e4m3fn.safetensors"
 
-# VAE
-RUN wget -O models/vae/ae.safetensors \
-    "https://aidolonsdata.s3.us-east-1.amazonaws.com/ae.safetensors"
+# # VAE
+# RUN wget -O models/vae/ae.safetensors \
+#     "https://aidolonsdata.s3.us-east-1.amazonaws.com/ae.safetensors"
 
-# CONTROLNET
-RUN wget -O models/controlnet/flux/flux_controlnet_union.safetensors \
-    "https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors"
+# # CONTROLNET
+# RUN wget -O models/controlnet/flux/flux_controlnet_union.safetensors \
+#     "https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors"
 
-# PULID
-RUN wget -O models/pulid/pulid_flux.safetensors \
-    "https://huggingface.co/guozinan/PuLID/resolve/main/pulid_flux_v0.9.0.safetensors"
+# # PULID
+# RUN wget -O models/pulid/pulid_flux.safetensors \
+#     "https://huggingface.co/guozinan/PuLID/resolve/main/pulid_flux_v0.9.0.safetensors"
 
-# INSIGHTFACE
-RUN wget -O models/insightface/models/antelopev2.zip \
-    "https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip" \
- && unzip models/insightface/models/antelopev2.zip -d models/insightface/models/
+# # INSIGHTFACE
+# RUN wget -O models/insightface/models/antelopev2.zip \
+#     "https://huggingface.co/MonsterMMORPG/tools/resolve/main/antelopev2.zip" \
+#  && unzip models/insightface/models/antelopev2.zip -d models/insightface/models/
 
-# Upscale models
-RUN wget -O models/upscale_models/4x-ClearRealityV1.pth \
-    "https://aidolonsdata.s3.us-east-1.amazonaws.com/4x-ClearRealityV1.pth"
+# # Upscale models
+# RUN wget -O models/upscale_models/4x-ClearRealityV1.pth \
+#     "https://aidolonsdata.s3.us-east-1.amazonaws.com/4x-ClearRealityV1.pth"
 
-# Download and unzip custom nodes
-RUN wget -O custom_nodes.zip \
-    "https://aidolonsdata.s3.us-east-1.amazonaws.com/custom_nodes.zip" \
- && unzip -o custom_nodes.zip -d /comfyui/custom_nodes
+# # Download and unzip custom nodes
+# RUN wget -O custom_nodes.zip \
+#     "https://aidolonsdata.s3.us-east-1.amazonaws.com/custom_nodes.zip" \
+#  && unzip -o custom_nodes.zip -d /comfyui/custom_nodes
 
 # =========================================
 # Stage 3: Final Image
