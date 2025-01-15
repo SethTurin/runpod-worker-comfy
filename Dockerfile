@@ -115,8 +115,8 @@ RUN wget -O models/clip/t5xxl_fp8_e4m3fn.safetensors \
 # Additional desired downloads
 # -----------------------------------------
 # UNET (FLUX 1-dev-FP8)
-# RUN wget -O models/unet/flux1-dev-fp8-e4m3fn.safetensors \
-#     "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux1-dev-fp8-e4m3fn.safetensors"
+RUN wget -O models/unet/flux1-dev-fp8-e4m3fn.safetensors \
+    "https://huggingface.co/Kijai/flux-fp8/resolve/main/flux1-dev-fp8-e4m3fn.safetensors"
 
 # # CLIP
 # RUN wget -O models/clip/clip_l.safetensors \
